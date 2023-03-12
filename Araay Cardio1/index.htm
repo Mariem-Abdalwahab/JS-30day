@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Array Cardio 💪</title>
+  <link rel="icon" href="https://fav.farm/🔥" />
+</head>
+<body>
+
+<script>
+
+const inventors=[
+{first:'mariem', last:'Abdalwahab', year: 2003, pass:1890},
+{first:'salah', last:'amir', year: 2002, pass:1890},
+{first:'hassan', last:'omar', year: 2005, pass:1890},
+{first:'ahmed', last:'salama', year: 2006, pass:1890},
+{first:'amr', last:'mahmoud', year: 2023, pass:1890},
+{first:'salma', last:'ahmed', year: 1989, pass:1890},
+{first:'marwa', last:'mohamed', year: 1955, pass:1890},
+{first:'mariem', last:'ramy', year: 1963, pass:1890},
+{first:'omar', last:'sabry', year: 1684, pass:1890},
+{first:'mohamed', last:'hany', year: 1684, pass:1890}
+];
+
+const pepole=[
+'mariem, elshall','Bernhard, Sandra', 'Bethea, Erin', 'Becker, Carl', 'Bentsen, Lloyd', 'Beckett, Samuel', 'Blake, William', 'Berger, Ric', 'Beddoes, Mick', 'Beethoven, Ludwig',
+      'Belloc, Hilaire', 'Begin, Menachem', 'Bellow, Saul', 'Benchley, Robert', 'Blair, Robert', 'Benenson, Peter', 'Benjamin, Walter', 'Berlin, Irving',
+      'Benn, Tony', 'Benson, Leana', 'Bent, Silas', 'Berle, Milton', 'Berry, Halle', 'Biko, Steve', 'Beck, Glenn', 'Bergman, Ingmar', 'Black, Elk', 'Berio, Luciano',
+      'Berne, Eric', 'Berra, Yogi', 'Berry, Wendell', 'Bevan, Aneurin', 'Ben-Gurion, David'];
+
+const f= inventors.filter(function(inventor){
+if(inventor.year>=1990){
+return true;
+}
+});
+console.table(f);
+
+const m= inventors.map(function(inventor){
+return inventor.first + ' ' + inventor.last;
+});
+console.log(m);
+
+const s= inventors.sort((a, b) => a>b? 1 : -1);
+console.table(s);
+
+const r= inventors.reduce(function(total,inventor){
+return total +inventor.year;
+},0);
+console.log(r);
+
+/*
+const groub=document.querySelector('.mw-category');
+const links= Array.from(groub.querySelectorAll('a'));
+const de= links
+		.map(link => link.textContent)
+		.filter(street => street.includes('de'));
+*/
+
+  const alpha = pepole.sort((lastOne, nextOne) => {
+      const [aLast, aFirst] = lastOne.split(', ');
+      const [bLast, bFirst] = nextOne.split(', ');
+      return aLast > bLast ? 1 : -1;
+    });
+    console.log(alpha);
+
+   
+    const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck', 'pogostick'];
+
+    const tran = data.reduce(function(obj, item) {
+      if (!obj[item]) {
+        obj[item] = 0;
+      }
+      obj[item]++;
+      return obj;
+    }, {});
+
+    console.log(tran);
+
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>array 2</title>
+
+    <link rel="icon" href="https://fav.farm/✅" />
+</head>
+    <body>
+        
+        <script >
+            const people = [
+                { name: 'Wes', year: 1988 },
+                { name: 'Kait', year: 1986 },
+                { name: 'Irv', year: 1970 },
+                { name: 'Lux', year: 2015 }
+            ];
+
+            const comments = [
+                { text: 'Love this!', id: 523423 },
+                { text: 'Super good', id: 823423 },
+                { text: 'You are the best', id: 2039842 },
+                { text: 'Ramen is my fav food ever', id: 123523 },
+                { text: 'Nice Nice Nice!', id: 542328 }
+            ];
+                                   // SOME //
+            // some prototype is one of the array at least return true
+
+            /*const isadult = people.some(persone => {
+                const year = (new Date()).getFullYear();
+                if (year - persone.year >= 19)
+                    return true;
+            });
+            console.log(isadult);
+            console.log({isadult}); //return obj*/
+
+
+                                   // EVERY //
+            // every prototype is all of the array  return true
+           /* const alladult = people.every(persone => {
+                const year = (new Date()).getFullYear();
+                if (year - persone.year >= 19)
+                    return true;
+            });
+            console.log(alladult);
+            console.log({ alladult }); //return obj*/
+
+
+                                    // FIND //
+            // find prototype is all of the array  return true
+           /* const ffind = comments.find(function (comment) {
+                if (comment.id === 823426)
+                    return true;
+            });
+            console.log(ffind);*/
+
+
+                                    // FIND INDEX //
+            
+            /* const index = comments.findIndex( (comment) => comment.id === 542328)
+                     console.log(index);*/
+
+             // DELETE ITEM //
+           
+            comments.splice(0, 1) // (index, nums of items to delete)
+            console.log(comments);
+             
+        </script>
+    </body>
+</html>
